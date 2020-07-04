@@ -6,7 +6,7 @@ import (
 	"io"
 	"testing"
 	"time"
-	"yyk/nnet"
+	"github.com/wenstudiocn/nnet"
 )
 var ws *nnet.WsServer
 var wsc *nnet.WsClient
@@ -16,8 +16,8 @@ var ws_server_conf = &nnet.HubConfig{
 	SizeOfRecvChan: 1024,
 	ReadBufSize: 1024,
 	WriteBufSize: 1024,
-	Timeout: 5 * time.Second, // 发送等超时
-	Tick:           30 * time.Second, // 定时回调
+	Timeout: 5 * time.Second,
+	Tick:           30 * time.Second,
 	ReadTimeout:    12 * time.Second,
 }
 

@@ -14,12 +14,12 @@ type ISession interface {
 	IsClosed() bool
 
 	Write(IPacket, time.Duration) error
-	AWrite(IPacket, time.Duration) error // 异步发送
+	AWrite(IPacket, time.Duration) error // async write
 
-	GetData() interface{} // 辅助数据
+	GetData() interface{} // data field
 	SetData(interface{})
 
-	UpdateId(uint64) //更新ID
+	UpdateId(uint64) // update session id
 	Id() uint64
 	SetId(uint64)
 

@@ -1,7 +1,6 @@
 package nnet
 
-// 默认的 IPacket 和 IProtocol 实现
-// 也是个 Demo
+// Default implementation of IPacket and IProtocol
 
 type Packet struct {
 	msg []byte

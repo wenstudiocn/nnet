@@ -50,7 +50,7 @@ func (self *Hub) Protocol() IProtocol {
 
 func (self *Hub) PutSession(id uint64, ses ISession) error {
 	self.Lock()
-	//@Notice: 顶替
+	//@Notice: replace
 	self.sess[id] = ses
 	self.Unlock()
 	return nil

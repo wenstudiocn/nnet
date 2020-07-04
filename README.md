@@ -1,14 +1,13 @@
 # nnet
 
-简单封装的网络层库，能够任意切换 tcp ws 等通信协议，能够自由使用数据封装格式
-专为这个项目制作
+nnet is a simple network library, it abstracts tcp & websocket for now.
 
 ## Example
 
-see lobby
+see examples
 
-## Todo
+## Todos
 
-- 能够简单的支持内存池
-- 能够通过支持中间件方式支持加密和压缩
-- Hub 配置方式更灵活
+- support mempool to reduce memory usage
+- support middleware architechure
+- Hub scalable configuration 

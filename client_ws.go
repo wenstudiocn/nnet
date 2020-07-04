@@ -4,11 +4,11 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-// 客户端组
+// client
 type WsClient struct {
 	*Hub
 	addr 	string
-	pos   int // 指示当前连接第几个 addr
+	pos   int // sequence of addr
 }
 
 func NewWsClient(cf *HubConfig, cb ISessionCallback, p IProtocol, addr string) *WsClient {

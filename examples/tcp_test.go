@@ -7,7 +7,7 @@ import (
 	"net"
 	"testing"
 	"time"
-	"yyk/nnet"
+	"github.com/wenstudiocn/nnet"
 )
 var s *nnet.WsServer
 var c *nnet.WsClient
@@ -17,8 +17,8 @@ var tcp_server_conf = &nnet.HubConfig{
 	SizeOfRecvChan: 1024,
 	ReadBufSize: 1024,
 	WriteBufSize: 1024,
-	Timeout: 5 * time.Second, // 发送等超时
-	Tick:           30 * time.Second, // 定时回调
+	Timeout: 5 * time.Second, // timeout of sending, receiving etc.
+	Tick:           30 * time.Second, // interval of timed callback
 	ReadTimeout:    12 * time.Second,
 }
 
@@ -27,8 +27,8 @@ var tcp_client_conf = &nnet.HubConfig{
 	SizeOfRecvChan: 1024,
 	ReadBufSize: 1024,
 	WriteBufSize: 1024,
-	Timeout: 5 * time.Second, // 发送等超时
-	Tick:           30 * time.Second, // 定时回调
+	Timeout: 5 * time.Second,
+	Tick:           30 * time.Second,
 	ReadTimeout:    12 * time.Second,
 }
 
